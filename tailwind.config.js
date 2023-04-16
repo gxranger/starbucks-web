@@ -7,7 +7,23 @@ module.exports = {
         './src/app.vue'
     ],
     theme: {
+        screens: {
+          'xs' : '375px',
+          'sm': '640px',
+          'md': '768px',
+          'lg': '1024px',
+          'xl': '1280px',
+          '2xl': '1536px'
+        },
         extend: {
+          zIndex: {
+            'minus': '-1',
+            '60': '60',
+            '70': '70',
+            '80': '80',
+            '90': '90',
+            '100': '100'
+          },
           colors: {
             primary: '#00A862'
           },
