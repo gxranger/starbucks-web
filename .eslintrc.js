@@ -1,24 +1,29 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
     'plugin:vue/vue3-essential',
     'standard-with-typescript',
-    'prettier'
+    'prettier',
   ],
-  overrides: [
-  ],
+  overrides: [],
+  // parser: '@typescript-eslint/parser',
   parserOptions: {
+    parser: '@typescript-eslint/parser',
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: [
-    'vue',
-    'prettier'
-  ],
+  plugins: ['vue', 'prettier', '@typescript-eslint'],
   rules: {
-    "prettier/prettier": 1
-  }
+    'prettier/prettier': 1,
+    'vue/multi-word-component-names': [
+      'error',
+      {
+        ignores: ['index'], // 需要忽略的组件名
+      },
+    ],
+  },
 }
