@@ -1,16 +1,8 @@
 <script lang="ts" setup>
     import { ref } from 'vue'
-    // Import Swiper Vue.js components
-    import { Swiper, SwiperSlide } from 'swiper/vue'
-    import { Navigation } from 'swiper'
-
-    // Import Swiper styles
-    import 'swiper/css'
-    import 'swiper/css/navigation'
-    import 'swiper/css/pagination'
+    import IndexBanner from '~/components/IndexBanner.vue'
 
     const menuStatus = ref(false)
-    const modules = [Navigation]
 
     function switchStatus() {
         menuStatus.value = !menuStatus.value
@@ -77,19 +69,7 @@
             </div>
         </div>
         <div class="h-full w-full bg-sky-500 lg:pl-30%">
-            <div class="w-full">
-                <swiper :modules="modules" :navigation="true" class="h-full w-full">
-                    <swiper-slide>
-                        <img class="h-full w-full" src="@/assets/images/1.png" />
-                    </swiper-slide>
-                    <swiper-slide>
-                        <img class="h-full w-full" src="@/assets/images/2.png" />
-                    </swiper-slide>
-                    <swiper-slide>
-                        <img class="h-full w-full" src="@/assets/images/3.jpg" />
-                    </swiper-slide>
-                </swiper>
-            </div>
+            <IndexBanner />
         </div>
     </div>
 </template>

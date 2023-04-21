@@ -1,9 +1,9 @@
 <template>
-  <div class="md:flex xs:hidden items-center h-16 text-primary text-base">
-    <a class="flex items-center cursor-pointer mr-2">
-      <img src="@/assets/icons/icon-account.svg" />
-      <span class="ml-1">登录</span>
-    </a>
-    <button class="border border-primary rounded-full text-base px-3 ml-4">注册</button>
-  </div>
+    <div class="h-16 items-center text-base text-primary xs:hidden md:flex">
+        <a class="mr-2 flex cursor-pointer items-center">
+            <img src="@/assets/icons/icon-account.svg" />
+            <span class="ml-1">登录</span>
+        </a>
+        <button class="ml-4 rounded-full border border-primary px-3 text-base">注册</button>
+    </div>
 </template>

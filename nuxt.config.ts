@@ -8,9 +8,9 @@ export default defineNuxtConfig({
             title: '星巴克 | 用每一杯咖啡传递星巴克独特的咖啡体验',
             link: [
                 {
-                    rel: 'shortcut icon external nofollow"',
-                    type: 'image/x-icon',
-                    href: '/favicon.ico',
+                    rel: 'icon',
+                    type: 'image/png',
+                    href: './favicon.png',
                 },
             ],
         },

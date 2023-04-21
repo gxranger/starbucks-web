@@ -4,12 +4,7 @@ module.exports = {
         browser: true,
         es2021: true,
     },
-    extends: [
-        '@nuxtjs/eslint-config-typescript',
-        'plugin:vue/vue3-recommended',
-        'standard-with-typescript',
-        'prettier',
-    ],
+    extends: ['@nuxtjs/eslint-config-typescript', 'plugin:vue/vue3-recommended', 'prettier'],
     overrides: [
         {
             files: [
