@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full">
+    <div class="w-full xs:hidden md:block">
         <swiper :modules="modules" :navigation="true" class="h-full w-full">
             <swiper-slide>
                 <img class="h-full w-full" src="@/assets/images/1.png" />
@@ -9,6 +9,19 @@
             </swiper-slide>
             <swiper-slide>
                 <img class="h-full w-full" src="@/assets/images/3.jpg" />
+            </swiper-slide>
+        </swiper>
+    </div>
+    <div class="w-full xs:block md:hidden">
+        <swiper :modules="modules" :navigation="true" class="h-full w-full">
+            <swiper-slide>
+                <img class="h-full w-full" src="@/assets/images/m1.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img class="h-full w-full" src="@/assets/images/m2.png" />
+            </swiper-slide>
+            <swiper-slide>
+                <img class="h-full w-full" src="@/assets/images/m3.jpg" />
             </swiper-slide>
         </swiper>
     </div>
