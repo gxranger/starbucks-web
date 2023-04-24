@@ -22,6 +22,7 @@
     const currentSrc = computed(
         () => item => item.index === navIndex.value ? item.active : item.url
     )
+
     function switchMobileNav(index) {
         navIndex.value = index
         if (index === 4) this.switchStatus()
@@ -33,9 +34,9 @@
 </script>
 
 <template>
-    <div class="h-screen w-full lg:flex">
+    <div class="h-screen w-full lg:flex lg:flex-col">
         <div class="z-60 bg-white shadow-lg xs:w-full lg:fixed lg:h-full lg:w-30%">
-            <header class="relative items-center justify-between p-5.5 xs:hidden md:flex">
+            <header class="relative items-center justify-between xs:hidden md:flex md:p-4 lg:p-5.5">
                 <div class="flex items-center">
                     <NuxtLink class="z-100 mr-3 w-9" to="/">
                         <img alt="星巴克" src="@/assets/images/logo.svg" />
@@ -99,18 +100,20 @@
                     </div>
                 </div>
             </XyzTransition>
-            <div class="flex h-full flex-col xs:py-4 xs:pl-5 md:pl-16 md:pr-10 lg:justify-center">
+            <div
+                class="flex h-full flex-col xs:py-4 xs:pl-5 md:pl-5 md:pr-10 lg:relative lg:bottom-6 lg:justify-center lg:pl-16"
+            >
                 <div class="font-bold xs:text-xl md:text-2.5xl">心情惬意，来杯咖啡吧&nbsp;☕</div>
                 <AccountButton />
             </div>
         </div>
         <ul
-            class="mobile-nav fixed bottom-0 z-80 h-14 w-full justify-between px-1.5 pt-2 text-xs shadow-[0_30px_25px_10px_rgba(0,0,0,0.5)] xs:flex md:hidden"
+            class="mobile-nav fixed bottom-0 z-80 h-14 w-full justify-between bg-white px-1.5 pt-2 text-xs shadow-nav xs:flex md:hidden"
         >
             <li
-                class="flex w-1/5 flex-col items-center"
                 v-for="(item, index) in mobileNavData"
                 :key="index"
+                class="flex w-1/5 flex-col items-center"
                 @click="switchMobileNav(index)"
             >
                 <NuxtLink class="flex flex-col items-center">
@@ -119,8 +122,36 @@
                 </NuxtLink>
             </li>
         </ul>
-        <div class="h-full w-full lg:pl-30%">
+        <div class="w-full lg:pl-30%">
             <IndexBanner />
+            <div
+                class="flex w-full bg-light py-6 xs:flex-col xs:items-center xs:px-3 md:flex-row md:justify-around md:px-3"
+            >
+                <NuxtLink
+                    class="xs:pb-5 md:pb-0 lg:relative lg:hover:bottom-1.5 lg:hover:shadow-md"
+                >
+                    <img
+                        class="w-full rounded md:h-36 lg:h-64"
+                        src="https://i.328888.xyz/2023/04/24/iS9f63.jpeg"
+                    />
+                </NuxtLink>
+                <NuxtLink
+                    class="xs:pb-5 md:pb-0 lg:relative lg:hover:bottom-1.5 lg:hover:shadow-md"
+                >
+                    <img
+                        class="w-full rounded md:h-36 lg:h-64"
+                        src="https://i.328888.xyz/2023/04/24/iS9yQy.jpeg"
+                    />
+                </NuxtLink>
+                <NuxtLink
+                    class="xs:pb-5 md:pb-0 lg:relative lg:hover:bottom-1.5 lg:hover:shadow-md"
+                >
+                    <img
+                        class="w-full rounded md:h-36 lg:h-64"
+                        src="https://i.328888.xyz/2023/04/24/iS9AC5.png"
+                    />
+                </NuxtLink>
+            </div>
         </div>
     </div>
 </template>

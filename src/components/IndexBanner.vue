@@ -1,29 +1,31 @@
 <template>
-    <div class="w-full xs:hidden md:block">
-        <swiper :modules="modules" :navigation="true" class="h-full w-full">
-            <swiper-slide>
-                <img class="h-full w-full" src="@/assets/images/1.png" />
-            </swiper-slide>
-            <swiper-slide>
-                <img class="h-full w-full" src="@/assets/images/2.png" />
-            </swiper-slide>
-            <swiper-slide>
-                <img class="h-full w-full" src="@/assets/images/3.jpg" />
-            </swiper-slide>
-        </swiper>
-    </div>
-    <div class="w-full xs:block md:hidden">
-        <swiper :modules="modules" :navigation="true" class="h-full w-full">
-            <swiper-slide>
-                <img class="h-full w-full" src="@/assets/images/m1.jpg" />
-            </swiper-slide>
-            <swiper-slide>
-                <img class="h-full w-full" src="@/assets/images/m2.png" />
-            </swiper-slide>
-            <swiper-slide>
-                <img class="h-full w-full" src="@/assets/images/m3.jpg" />
-            </swiper-slide>
-        </swiper>
+    <div class="w-full">
+        <div class="xs:hidden md:block">
+            <swiper :modules="modules" :navigation="true" class="h-full w-full">
+                <swiper-slide>
+                    <img class="h-full w-full" src="https://i.328888.xyz/2023/04/24/iS9iVU.png" />
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="h-full w-full" src="https://i.328888.xyz/2023/04/24/iSvuSp.png" />
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="h-full w-full" src="https://i.328888.xyz/2023/04/24/iS9Vbv.jpeg" />
+                </swiper-slide>
+            </swiper>
+        </div>
+        <div class="xs:block md:hidden">
+            <swiper :modules="modules" :navigation="true" class="h-full w-full">
+                <swiper-slide>
+                    <img class="h-full w-full" src="https://i.328888.xyz/2023/04/24/iS9Dg8.jpeg" />
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="h-full w-full" src="https://i.328888.xyz/2023/04/24/iS9ULZ.png" />
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="h-full w-full" src="https://i.328888.xyz/2023/04/24/iS9tUF.jpeg" />
+                </swiper-slide>
+            </swiper>
+        </div>
     </div>
 </template>
 
@@ -35,6 +37,7 @@
     // Import Swiper styles
     import 'swiper/css'
     import 'swiper/css/navigation'
+
     const modules = [Navigation]
 </script>
 
