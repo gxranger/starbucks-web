@@ -1,31 +1,19 @@
 <template>
     <div class="w-full">
-        <div class="xs:hidden md:block">
-            <swiper :modules="modules" :navigation="true" class="h-full w-full">
-                <swiper-slide>
-                    <img class="h-full w-full" src="https://i.328888.xyz/2023/04/24/iS9iVU.png" />
-                </swiper-slide>
-                <swiper-slide>
-                    <img class="h-full w-full" src="https://i.328888.xyz/2023/04/24/iSvuSp.png" />
-                </swiper-slide>
-                <swiper-slide>
-                    <img class="h-full w-full" src="https://i.328888.xyz/2023/04/24/iS9Vbv.jpeg" />
-                </swiper-slide>
-            </swiper>
-        </div>
-        <div class="xs:block md:hidden">
-            <swiper :modules="modules" :navigation="true" class="h-full w-full">
-                <swiper-slide>
-                    <img class="h-full w-full" src="https://i.328888.xyz/2023/04/24/iS9Dg8.jpeg" />
-                </swiper-slide>
-                <swiper-slide>
-                    <img class="h-full w-full" src="https://i.328888.xyz/2023/04/24/iS9ULZ.png" />
-                </swiper-slide>
-                <swiper-slide>
-                    <img class="h-full w-full" src="https://i.328888.xyz/2023/04/24/iS9tUF.jpeg" />
-                </swiper-slide>
-            </swiper>
-        </div>
+        <swiper :loop="true" :modules="modules" :navigation="true" class="h-full w-full">
+            <swiper-slide>
+                <img class="xs:hidden md:block" src="https://i.328888.xyz/2023/04/24/iS9iVU.png" />
+                <img class="xs:block md:hidden" src="https://i.328888.xyz/2023/04/24/iS9Dg8.jpeg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img class="xs:hidden md:block" src="https://i.328888.xyz/2023/04/24/iSvuSp.png" />
+                <img class="xs:block md:hidden" src="https://i.328888.xyz/2023/04/24/iS9ULZ.png" />
+            </swiper-slide>
+            <swiper-slide>
+                <img class="xs:hidden md:block" src="https://i.328888.xyz/2023/04/24/iS9Vbv.jpeg" />
+                <img class="xs:block md:hidden" src="https://i.328888.xyz/2023/04/24/iS9tUF.jpeg" />
+            </swiper-slide>
+        </swiper>
     </div>
 </template>
 
