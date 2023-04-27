@@ -3,28 +3,20 @@
 
     const menuStatus = ref(false)
     const mobileNavData = [
-        { index: 0, url: '/icon-home.svg', active: '/icon-home-active.svg', name: '主页' },
-        { index: 1, url: '/icon-stores.svg', active: '/icon-stores-active.svg', name: '门店' },
-        {
-            index: 2,
-            url: '/icon-account.svg',
-            active: '/icon-account-active.svg',
-            name: '我的账户',
-        },
-        { index: 3, url: '/icon-menu.svg', active: '/icon-menu-active.svg', name: '菜单' },
-        { index: 4, url: '/icon-more.svg', active: '/icon-more-active.svg', name: '更多' },
+        { index: 0, icons: 'home-two', name: '主页' },
+        { index: 1, icons: 'shop', name: '门店' },
+        { index: 2, icons: 'people', name: '我的账户' },
+        { index: 3, icons: 'juice', name: '菜单' },
+        { index: 4, icons: 'all-application', name: '更多' },
     ]
-    const navIndex = ref(0)
+    const curIndex = ref(0)
 
     const currentClass = computed(
-        () => cIndex => cIndex === navIndex.value ? 'text-primary' : 'text-neutral-500'
-    )
-    const currentSrc = computed(
-        () => item => item.index === navIndex.value ? item.active : item.url
+        () => cIndex => cIndex === curIndex.value ? 'text-primary' : 'text-neutral-500'
     )
 
     function switchMobileNav(index) {
-        navIndex.value = index
+        curIndex.value = index
         if (index === 4) this.switchStatus()
     }
 
@@ -36,7 +28,7 @@
 <template>
     <div class="h-screen w-full lg:flex lg:flex-col">
         <div class="z-60 bg-white shadow-lg xs:w-full lg:fixed lg:h-full lg:w-30%">
-            <header class="relative items-center justify-between xs:hidden md:flex md:p-4 lg:p-5.5">
+            <header class="lg:p-5.5 relative items-center justify-between xs:hidden md:flex md:p-4">
                 <div class="flex items-center">
                     <NuxtLink class="z-100 mr-3 w-9" to="/">
                         <img alt="星巴克" src="@/assets/images/logo.svg" />
@@ -52,12 +44,22 @@
                     xyz="duration-3 short-100% wide-25%"
                     @click="switchStatus"
                 >
-                    <img
+                    <icon-park
+                        v-show="menuStatus"
+                        class="xyz-in"
+                        type="close"
+                        theme="outline"
+                        size="24"
+                        fill="#333"
+                    />
+                    <icon-park
                         v-show="!menuStatus"
                         class="xyz-in"
-                        src="@/assets/icons/icon-hamburger.svg"
+                        type="hamburger-button"
+                        theme="outline"
+                        size="26"
+                        fill="#333"
                     />
-                    <img v-show="menuStatus" class="xyz-in" src="@/assets/icons/icon-close.svg" />
                 </a>
             </header>
             <XyzTransition xyz="fade small-3 origin-center">
@@ -112,12 +114,29 @@
                 @click="switchMobileNav(index)"
             >
                 <NuxtLink class="flex flex-col items-center">
-                    <img :src="currentSrc(item)" />
+                    <icon-park
+                        v-show="curIndex !== index"
+                        :type="item.icons"
+                        theme="outline"
+                        size="24"
+                        fill="#737373"
+                        class="mb-1"
+                        :stroke-width="2"
+                    />
+                    <icon-park
+                        v-show="curIndex === index"
+                        :type="item.icons"
+                        theme="filled"
+                        size="24"
+                        fill="#00A862"
+                        class="mb-1"
+                        :stroke-width="1"
+                    />
                     <span :class="currentClass(index)">{{ item.name }}</span>
                 </NuxtLink>
             </li>
         </ul>
-        <div class="w-full lg:pl-30%">
+        <div class="w-full xs:pb-16 md:pb-0 lg:pl-30%">
             <slot name="right-body" />
         </div>
     </div>

@@ -1,6 +1,12 @@
 <template>
     <div class="w-full">
-        <swiper :loop="true" :modules="modules" :navigation="true" class="h-full w-full">
+        <swiper
+            :loop="true"
+            :autoplay="autoplay"
+            :modules="modules"
+            :navigation="true"
+            class="h-full w-full"
+        >
             <swiper-slide>
                 <img class="xs:hidden md:block" src="https://i.328888.xyz/2023/04/24/iS9iVU.png" />
                 <img class="xs:block md:hidden" src="https://i.328888.xyz/2023/04/24/iS9Dg8.jpeg" />
@@ -20,13 +26,17 @@
 <script lang="ts" setup>
     // Import Swiper Vue.js components
     import { Swiper, SwiperSlide } from 'swiper/vue'
-    import { Navigation } from 'swiper'
+    import { Navigation, Autoplay } from 'swiper'
 
     // Import Swiper styles
     import 'swiper/css'
     import 'swiper/css/navigation'
 
-    const modules = [Navigation]
+    const modules = [Navigation, Autoplay]
+    const autoplay = {
+        delay: 5000,
+        disableOnInteraction: false,
+    }
 </script>
 
 <style scoped>

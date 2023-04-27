@@ -29,6 +29,7 @@ module.exports = {
             },
             colors: {
                 primary: '#00A862',
+                secondary: '#C2A661',
                 light: '#f7f7f7',
             },
             fontSize: {
@@ -40,11 +41,12 @@ module.exports = {
                 98: '26rem',
             },
             padding: {
-                5.5: '24px',
                 '30%': '30%',
             },
             boxShadow: {
                 nav: '0 0 5px rgba(0,0,0, 0.15)',
+                def: '0 0 10px rgba(0,0,0, 0.15)',
+                list: '0 1px 2px rgba(121,121,121, 0.45)',
             },
         },
     },

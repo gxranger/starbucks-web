@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@animxyz/vue3": "^0.6.7",
+    "@icon-park/vue-next": "^1.4.2",
     "@nuxtjs/composition-api": "^0.33.1",
     "@pinia/nuxt": "^0.4.8",
     "pinia": "^2.0.34",
