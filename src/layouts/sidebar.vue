@@ -74,10 +74,12 @@
                         class="absolute right-3 top-5 z-100 flex h-7 w-7 items-center justify-center md:hidden"
                         @click="switchStatus"
                     >
-                        <img
+                        <icon-park
                             v-show="menuStatus"
-                            class="xyz-in"
-                            src="@/assets/icons/icon-close.svg"
+                            type="close"
+                            theme="outline"
+                            size="24"
+                            fill="#333"
                         />
                     </a>
                     <ul class="nav pr-8 font-bold leading-10">
