@@ -27,6 +27,7 @@
 
 <template>
     <div class="h-screen w-full lg:flex lg:flex-col">
+        <!-- 左侧固定菜单 -->
         <div class="z-60 bg-white shadow-lg xs:w-full lg:fixed lg:h-full lg:w-30%">
             <header class="lg:p-5.5 relative items-center justify-between xs:hidden md:flex md:p-4">
                 <div class="flex items-center">
@@ -138,6 +139,8 @@
                 </NuxtLink>
             </li>
         </ul>
+
+        <!-- 右侧滚动内容 -->
         <div class="w-full xs:pb-16 md:pb-0 lg:pl-30%">
             <slot name="right-body" />
         </div>

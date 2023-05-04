@@ -31,6 +31,7 @@ module.exports = {
                 primary: '#00A862',
                 secondary: '#C2A661',
                 light: '#f7f7f7',
+                content: 'rgba(0,0,0,0.56)',
             },
             fontSize: {
                 '2.5xl': '1.7rem',
@@ -47,6 +48,7 @@ module.exports = {
                 nav: '0 0 5px rgba(0,0,0, 0.15)',
                 def: '0 0 10px rgba(0,0,0, 0.15)',
                 list: '0 1px 2px rgba(121,121,121, 0.45)',
+                menu: '0 1px 1px 1px rgba(0, 0, 0, 0.12)',
             },
         },
     },

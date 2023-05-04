@@ -76,7 +76,7 @@
                     <img alt="" src="@/assets/images/logo-msr.svg" />
                 </div>
             </div>
-            <div class="flex flex-col items-center border bg-light py-6 md:px-[5%] lg:px-[10%]">
+            <div class="flex flex-col items-center bg-light py-6 md:px-[5%] lg:px-[10%]">
                 <h2 class="mb-5 text-[22px] text-black">星巴克精选</h2>
                 <p class="text-zinc-500 xs:mb-0 lg:mb-3">在星巴克天猫旗舰店发现更多咖啡心意</p>
                 <ul class="flex justify-between xs:w-[95%] xs:flex-wrap md:flex-nowrap lg:w-[70%]">
@@ -150,7 +150,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="flex flex-col items-center border py-6">
+            <div class="flex flex-col items-center py-6">
                 <h2 class="mb-5 text-[22px] text-black">1912 派克街 | 咖啡星讲堂</h2>
                 <p class="text-zinc-500 xs:mb-0">了解更多星巴克咖啡文化</p>
                 <div class="w-full p-5 pt-5">
